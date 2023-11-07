@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h3 class="modal-title">New playlist</h3>
+</div>
+<form role="form" novalidate class="form-horizontal">
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="inputPlaylistName" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" id="inputPlaylistName" class="form-control" ng-model="name" ng-required />
+      </div>
+      <label  class="col-sm-2 control-label">is Public</label>
+      <div class="col-sm-10">
+        <input type="checkbox" id="switch" class="checkbox" ng-model="type"/>
+      </div>
+      <label  class="col-sm-2 control-label">Public & ReadOnly</label>
+      <div class="col-sm-10">
+        <input type="checkbox" id="switch1" class="checkbox" ng-model="read_type"/>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok(name,type,read_type)">OK</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+  </div>
+</form>
